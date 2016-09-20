@@ -30,3 +30,7 @@ for file in $files; do
     ln -sv $DOTFILES_ROOT/$file ~/$file
 done
 
+# Install Sublime Text icon
+cp "$DOTFILES_ROOT/assets/icons/st.icns" "/Applications/Sublime Text.app/Contents/Resources/Sublime Text.icns"
+killall Dock
+
