@@ -1,9 +1,10 @@
-execute pathogen#infect()
+" Vundle and bundles configuration
+source ~/.vim/bundles.vim
 
-set nocompatible
+" set nocompatible
 syntax on
 set nu
-filetype indent plugin on
+" filetype indent plugin on
 
 " Necessary to get color scheme to override iTerm's
 set t_Co=256
@@ -25,4 +26,3 @@ set tabstop=4
 set shiftwidth=4
 set autoindent
 set smartindent
-
