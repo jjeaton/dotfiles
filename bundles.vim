@@ -12,5 +12,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
 
+Plugin 'ShowMarks7'
+
 call vundle#end()
 filetype plugin indent on     " required!
