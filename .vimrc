@@ -7,13 +7,9 @@ filetype indent plugin on
 
 " Necessary to get color scheme to override iTerm's
 set t_Co=256
-" colorscheme base16-flat
-" colorscheme Tomorrow-Night-Eighties
-" set background=dark
-
 colorscheme OceanicNext
 set background=dark
- 
+
 " Keymaps
 let mapleader=","
 nnoremap <silent> <F4> :set cursorline!<CR>
