@@ -1,36 +1,168 @@
 #!/usr/bin/env bash
-
+# #############################################################################
 # Install dotfiles
+#
+# Many thanks to https://github.com/holman/dotfiles
+# #############################################################################
 
-
-# Make symlinks
-
+# #############################################################################
+# Variables
+# #############################################################################
 DOTFILES_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"  # dotfiles directory
-DOTBAK=~/.dotfiles_old                                         # old dotfiles backup directory
-# list of files/folders to symlink in homedir
-files=".vimrc"
 
-##########
+set -e
+echo ''
 
-# create dotfiles_old in homedir
-echo "Creating $DOTBAK for backup of any existing dotfiles in ~"
-mkdir -p $DOTBAK
-echo "...done"
+# #############################################################################
+# Functions
+# #############################################################################
+info () {
+  printf "\r  [ \033[00;34m..\033[0m ] $1\n"
+}
+
+user () {
+  printf "\r  [ \033[0;33m??\033[0m ] $1\n"
+}
+
+success () {
+  printf "\r\033[2K  [ \033[00;32mOK\033[0m ] $1\n"
+}
+
+fail () {
+  printf "\r\033[2K  [\033[0;31mFAIL\033[0m] $1\n"
+  echo ''
+  exit
+}
+
+link_file () {
+  local src=$1 dst=$2
+
+  local overwrite= backup= skip=
+  local action=
+
+  if [ -f "$dst" -o -d "$dst" -o -L "$dst" ]
+  then
+
+    if [ "$overwrite_all" == "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" == "false" ]
+    then
+
+      local currentSrc="$(readlink $dst)"
+
+      if [ "$currentSrc" == "$src" ]
+      then
+
+        skip=true;
+
+      else
+
+        user "File already exists: $dst ($(basename "$src")), what do you want to do?\n\
+        [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all?"
+        read -n 1 action
+
+        case "$action" in
+          o )
+            overwrite=true;;
+          O )
+            overwrite_all=true;;
+          b )
+            backup=true;;
+          B )
+            backup_all=true;;
+          s )
+            skip=true;;
+          S )
+            skip_all=true;;
+          * )
+            ;;
+        esac
+
+      fi
+
+    fi
+
+    overwrite=${overwrite:-$overwrite_all}
+    backup=${backup:-$backup_all}
+    skip=${skip:-$skip_all}
+
+    if [ "$overwrite" == "true" ]
+    then
+      rm -rf "$dst"
+      success "removed $dst"
+    fi
+
+    if [ "$backup" == "true" ]
+    then
+      mv "$dst" "${dst}.backup"
+      success "moved $dst to ${dst}.backup"
+    fi
+
+    if [ "$skip" == "true" ]
+    then
+      success "skipped $src"
+    fi
+  fi
+
+  if [ "$skip" != "true" ]  # "false" or empty
+  then
+    ln -s "$1" "$2"
+    success "linked $1 to $2"
+  fi
+}
+
+install_dotfiles () {
+  info 'installing dotfiles'
+
+  local overwrite_all=false backup_all=false skip_all=false
+
+  for src in $(find -H "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink' -not -path '*.git*')
+  do
+    dst="$HOME/.$(basename "${src%.*}")"
+    link_file "$src" "$dst"
+  done
+}
+# #############################################################################
+# Configure vim
+# #############################################################################
+# Depends on git and vim being installed
+# .vimrc was already mapped above.
+configure_vim () {
+	info 'configuring vim'
+
+	local overwrite_all=false backup_all=false skip_all=false
+
+	# Install Vundle and link bundles configuration.
+	if [ ! -d ~/.vim/bundle/Vundle.vim/.git ]; then
+		git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+	fi
+	link_file "$DOTFILES_ROOT/bundles.vim" ~/.vim/bundles.vim
+	# Install plugins
+	vim -u ~/.vim/bundles.vim +BundleInstall +qall
+}
+
+# #############################################################################
+# Symlinks
+# #############################################################################
 
 # change to the dotfiles directory
-echo "Changing to the $DOTFILES_ROOT directory"
+info "Changing to the $DOTFILES_ROOT directory"
 cd $DOTFILES_ROOT
-echo "...done"
+success '...done'
 
-# move any existing dotfiles in homedir to dotfiles_bak directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
-for file in $files; do
-    echo "Moving any existing dotfiles from ~ to $DOTBAK"
-    mv ~/$file $DOTBAK/
-    echo "Creating symlink to $file in home directory."
-    ln -sv $DOTFILES_ROOT/$file ~/$file
-done
+install_dotfiles
+configure_vim
+
+# #############################################################################
+# App icons
+# #############################################################################
 
 # Install Sublime Text icon
-cp "$DOTFILES_ROOT/assets/icons/st.icns" "/Applications/Sublime Text.app/Contents/Resources/Sublime Text.icns"
-killall Dock
+cmp --silent "$DOTFILES_ROOT/assets/icons/st.icns" "/Applications/Sublime Text.app/Contents/Resources/Sublime Text.icns"
+st_icon_already_installed=$?
+if [ $st_icon_already_installed != 0 ]; then
+	info 'installing sublime text icon'
+	cp "$DOTFILES_ROOT/assets/icons/st.icns" "/Applications/Sublime Text.app/Contents/Resources/Sublime Text.icns"
+	killall Dock
+fi
 
+echo ''
+echo '  All installed!'
