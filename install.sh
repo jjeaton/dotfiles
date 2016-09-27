@@ -156,13 +156,9 @@ configure_vim
 # #############################################################################
 
 # Install Sublime Text icon
-cmp --silent "$DOTFILES_ROOT/assets/icons/st.icns" "/Applications/Sublime Text.app/Contents/Resources/Sublime Text.icns"
-st_icon_already_installed=$?
-if [ $st_icon_already_installed != 0 ]; then
-	info 'installing sublime text icon'
-	cp "$DOTFILES_ROOT/assets/icons/st.icns" "/Applications/Sublime Text.app/Contents/Resources/Sublime Text.icns"
-	killall Dock
-fi
+info 'installing sublime text icon'
+cp "$DOTFILES_ROOT/assets/icons/st.icns" "/Applications/Sublime Text.app/Contents/Resources/Sublime Text.icns"
+killall Dock
 
 echo ''
 echo '  All installed!'
