@@ -126,17 +126,17 @@ install_dotfiles () {
 # Depends on git and vim being installed
 # .vimrc was already mapped above.
 configure_vim () {
-	info 'configuring vim'
+  info 'configuring vim'
 
-	local overwrite_all=false backup_all=false skip_all=false
+  local overwrite_all=false backup_all=false skip_all=false
 
-	# Install Vundle and link bundles configuration.
-	if [ ! -d ~/.vim/bundle/Vundle.vim/.git ]; then
-		git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-	fi
-	link_file "$DOTFILES_ROOT/bundles.vim" ~/.vim/bundles.vim
-	# Install plugins
-	vim -u ~/.vim/bundles.vim +BundleInstall +qall
+  # Install Vundle and link bundles configuration.
+  if [ ! -d ~/.vim/bundle/Vundle.vim/.git ]; then
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  fi
+  link_file "$DOTFILES_ROOT/bundles.vim" ~/.vim/bundles.vim
+  # Install plugins
+  vim -u ~/.vim/bundles.vim +BundleInstall +qall
 }
 
 # #############################################################################
