@@ -6,4 +6,4 @@ Steps:
 2. Run `./install.sh`.
 3. Remap Caps Lock to Ctrl for each keyboard.
    System Preferences > Keyboard > Modifier Keys...
-
+4. Emoji substitutions were downloaded to `assets/config/emoji-substitutions.plist` drag them into the pane in Preferences > Keyboard > Text.
