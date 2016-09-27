@@ -139,6 +139,28 @@ configure_vim () {
   vim -u ~/.vim/bundles.vim +BundleInstall +qall
 }
 
+download_emoji_substitutions () {
+  # Emoji substitutions
+  info 'downloading emoji substitutions'
+  mkdir -p $DOTFILES_ROOT/assets/config
+  curl -so \
+    "$DOTFILES_ROOT/assets/config/emoji-substitutions.plist" \
+    https://raw.githubusercontent.com/warpling/Macmoji/master/emoji%20substitutions.plist
+  success 'downloaded emoji substitutions, drag them into Prefs > Keyboard > Text'
+}
+
+app_icons () {
+  # Install Sublime Text icon
+  info 'installing sublime text icon'
+  cp "$DOTFILES_ROOT/assets/icons/st.icns" "/Applications/Sublime Text.app/Contents/Resources/Sublime Text.icns"
+  killall Dock
+}
+
+print_end () {
+  echo ''
+  echo '  All installed!'
+}
+
 # #############################################################################
 # Symlinks
 # #############################################################################
@@ -154,23 +176,7 @@ configure_vim
 # #############################################################################
 # OS X Config
 # #############################################################################
+download_emoji_substitutions
+app_icons
 
-# Emoji substitutions
-info 'downloading emoji substitutions'
-mkdir -p $DOTFILES_ROOT/assets/config
-curl -so \
-  "$DOTFILES_ROOT/assets/config/emoji-substitutions.plist" \
-  https://raw.githubusercontent.com/warpling/Macmoji/master/emoji%20substitutions.plist
-success 'downloaded emoji substitutions, drag them into Prefs > Keyboard > Text'
-
-# #############################################################################
-# App icons
-# #############################################################################
-
-# Install Sublime Text icon
-info 'installing sublime text icon'
-cp "$DOTFILES_ROOT/assets/icons/st.icns" "/Applications/Sublime Text.app/Contents/Resources/Sublime Text.icns"
-killall Dock
-
-echo ''
-echo '  All installed!'
+print_end
