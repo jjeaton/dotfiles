@@ -152,6 +152,18 @@ install_dotfiles
 configure_vim
 
 # #############################################################################
+# OS X Config
+# #############################################################################
+
+# Emoji substitutions
+info 'downloading emoji substitutions'
+mkdir -p $DOTFILES_ROOT/assets/config
+curl -so \
+  "$DOTFILES_ROOT/assets/config/emoji-substitutions.plist" \
+  https://raw.githubusercontent.com/warpling/Macmoji/master/emoji%20substitutions.plist
+success 'downloaded emoji substitutions, drag them into Prefs > Keyboard > Text'
+
+# #############################################################################
 # App icons
 # #############################################################################
 
