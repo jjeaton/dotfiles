@@ -3,6 +3,12 @@
 Steps:
 
 1. Clone the repo: `git clone git@github.com:jjeaton/dotfiles.git ~/.dotfiles`.
+2. Create `.localrc` for local environment variables and customizations.
+3. Create `.slack` for Day One to Slack workflow:
+    ```
+    SLACK_TOKEN_RS=
+    SLACK_CHANNEL_STANDUP=
+    ```  
 2. Run `./install.sh`.
 3. Remap Caps Lock to Ctrl for each keyboard.
    System Preferences > Keyboard > Modifier Keys...
@@ -27,6 +33,7 @@ App configuration managed by mackup:
 * phpstorm
 * s3cmd
 * scrivener
+* services (OS X Library/Services)
 * soulver
 * sublime-text-3 (Packages/User directory)
 * textexpander
