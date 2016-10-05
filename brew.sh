@@ -56,11 +56,15 @@ brew install bash-completion
 brew install dark-mode
 brew install dnsmasq
 brew install dos2unix
+brew install ffmpeg
 brew install flow
+brew install git
 brew install httpie
+brew install hub
 brew install imagemagick --with-webp
 
 brew install lftp
+brew install libav
 brew install libyaml
 brew install lnav
 
@@ -68,12 +72,17 @@ brew install lynx
 
 brew install mackup
 brew install macvim
+brew install mongodb
+brew install multimarkdown
 brew install php70
+brew install phpunit
 
 brew install python
 brew install python3
 
+brew install s3cmd
 brew install ssh-copy-id
+brew install subversion
 brew install testssl
 brew install tmux
 brew install tree
