@@ -50,7 +50,7 @@ fi
 # [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 # zsh completions.
-fpath=(/usr/local/share/zsh-completions $fpath)
+fpath=(/usr/local/share/zsh/site-functions /usr/local/share/zsh-completions $fpath)
 
 # Load z.
 . `brew --prefix`/etc/profile.d/z.sh
