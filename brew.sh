@@ -75,6 +75,7 @@ brew install macvim
 brew install mongodb
 brew install multimarkdown
 brew install php70
+brew install php70-intl
 brew install phpunit
 
 brew install python
