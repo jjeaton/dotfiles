@@ -9,15 +9,18 @@ Steps:
     SLACK_TOKEN_RS=
     SLACK_CHANNEL_STANDUP=
     ```  
-2. Run `./install.sh`.
 3. Remap Caps Lock to Ctrl for each keyboard.
    System Preferences > Keyboard > Modifier Keys...
+4. Run `./brew.sh` to install dependencies.
+5. Change shell to zsh `sudo sh -c "echo '/usr/local/bin/zsh' >> /etc/shells"`
+	1. Verify with `cat /etc/shells | grep /usr/local/bin/zsh`
+	2. Change shell `chsh -s /usr/local/bin/zsh`
+2. Run `./install.sh`.
 4. Emoji substitutions were downloaded to `assets/config/emoji-substitutions.plist` drag them into the pane in Preferences > Keyboard > Text.
 5. Link the mackup configuration into home (otherwise it won't register our custom backup directory) `ln -s ~/Dropbox\ \(Personal\)/Backups/mackup/.mackup.cfg ~/.mackup.cfg`
 6. Run `mackup restore` to link the mackup configuration files.
-7. Run `./node/install.sh` to install nvm.
+7. Run `./node/install.sh` to install nvm, node, npm and global npm packages.
 8. Run `nvm use default` or restart shell
-9. Run `npm install --global trash-cli`
 
 App configuration managed by mackup:
 
