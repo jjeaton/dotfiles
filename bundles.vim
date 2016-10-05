@@ -27,7 +27,6 @@ Plugin 'dsawardekar/wordpress.vim'
 Plugin 'terryma/vim-multiple-cursors'
 
 " Not sure if this really works
-Plugin 'ShowMarks7'
 Plugin 'Smart-Tabs'
 
 call vundle#end()
