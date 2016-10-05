@@ -5,6 +5,7 @@ alias e='subl . &'
 alias zs='source ~/.zshrc'
 
 alias t='trash'
+alias rm='trash'
 
 # vagrant
 alias v='vagrant'

@@ -15,6 +15,9 @@ Steps:
 4. Emoji substitutions were downloaded to `assets/config/emoji-substitutions.plist` drag them into the pane in Preferences > Keyboard > Text.
 5. Link the mackup configuration into home (otherwise it won't register our custom backup directory) `ln -s ~/Dropbox\ \(Personal\)/Backups/mackup/.mackup.cfg ~/.mackup.cfg`
 6. Run `mackup restore` to link the mackup configuration files.
+7. Run `./node/install.sh` to install nvm.
+8. Run `nvm use default` or restart shell
+9. Run `npm install --global trash-cli`
 
 App configuration managed by mackup:
 
