@@ -29,6 +29,7 @@ brew upgrade
 
 brew tap bradp/vv
 brew tap caskroom/cask
+brew tap caskroom/fonts
 brew tap homebrew/boneyard
 brew tap homebrew/core
 brew tap homebrew/dupes
@@ -52,6 +53,7 @@ brew install gnu-sed --with-default-names
 brew install vim --with-override-system-vi
 
 brew install ack
+brew install awscli
 brew install bash-completion
 brew install dark-mode
 brew install dnsmasq
@@ -98,16 +100,46 @@ brew install zsh
 brew install zsh-completions
 
 # Casks
+brew cask install aerial
 brew cask install alfred
 brew cask install appcleaner
+brew cask install bartender
+brew cask install bettertouchtool
 brew cask install caffeine
 brew cask install cheatsheet
+brew cask install crashplan
+brew cask install dash
+brew cask install docker
 brew cask install dropbox
+brew cask install firefox
 brew cask install flux
+brew cask install fluid
 brew cask install google-chrome
+brew cask install hazel
+brew cask install iterm2
+brew cask install jumpcut
+brew cask install lastpass
+brew cask install marked
+brew cask install nvalt
+brew cask install phpstorm
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
+brew cask install rescuetime
+brew cask install skype
+brew cask install slack
+brew cask install sequel-pro
+brew cask install sqlitebrowser
+brew cask install soulver
+brew cask install sourcetree
 brew cask install superduper
+brew cask install transmit
+brew cask install virtualbox
+brew cask install vagrant
+brew cask install vagrant-manager
 brew cask install vlc
+
+# Fonts
+brew cask install font-inconsolata-dz
+brew cask install font-inconsolata-dz-for-powerline
 
 # Remove outdated versions from the cellar.
 brew cleanup
