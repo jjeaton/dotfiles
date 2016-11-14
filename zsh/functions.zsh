@@ -47,3 +47,23 @@ function urlencode() {
 function urldecode() {
     python -c "import sys, urllib as ul; print ul.unquote_plus(sys.argv[1])" "$1"
 }
+
+# Determine size of a file or total size of a directory
+function fs() {
+	if du -b /dev/null > /dev/null 2>&1; then
+		local arg=-sbh;
+	else
+		local arg=-sh;
+	fi
+	if [[ -n "$@" ]]; then
+		du $arg -- "$@";
+	else
+		du $arg .[^.]* ./*;
+	fi;
+}
+
+# Run `dig` and display the most useful info
+function digg() {
+	dig +nocmd "$1" any +multiline +noall +answer;
+}
+

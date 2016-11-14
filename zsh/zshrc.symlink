@@ -31,7 +31,7 @@ done
 
 unset config_files
 
-# Load nvm, this is in the main file so that the nvm installer will 
+# Load nvm, this is in the main file so that the nvm installer will
 # recognize it and not attempt to re-add it.
 export NVM_DIR=~/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -52,3 +52,7 @@ load-nvmrc
 # nvm completions
 [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 
+# Allow local customizations
+if [ -f ~/.zshrc_local ]; then
+    source ~/.zshrc_local
+fi
