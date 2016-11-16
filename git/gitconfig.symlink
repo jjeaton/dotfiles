@@ -1,0 +1,39 @@
+# Local/private config goes in the include
+[include]
+        path = ~/.gitconfig.local
+[alias]
+        co = "checkout"
+        changelog = "!_() { t=$(git describe --abbrev=0 --tags); git log ${t}..HEAD --no-merges --pretty=format:'* %s'; }; _"
+        unstage = "reset HEAD --"
+[color]
+        diff = auto
+        status = auto
+        branch = auto
+        ui = true
+[core]
+        autocrlf = input
+        excludesfile = ~/.gitignore_global
+        editor = vim
+        whitespace = -trailing-space,-space-before-tab,-indent-with-non-tab,-tab-in-indent
+[diff]
+        ui = auto
+[apply]
+        whitespace = nowarn
+[mergetool]
+        keepBackup = false
+[difftool]
+        prompt = false
+[help]
+        autocorrect = 1
+[push]
+        default = simple
+[filter "lfs"]
+        clean = git-lfs clean %f
+        smudge = git-lfs smudge %f
+        required = true
+[difftool "sourcetree"]
+        cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+        path =
+[mergetool "sourcetree"]
+        cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+        trustExitCode = true

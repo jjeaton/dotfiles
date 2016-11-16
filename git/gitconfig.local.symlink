@@ -1,0 +1,5 @@
+[user]
+        name = Josh Eaton
+        email = josh@josheaton.org
+[credential]
+        helper = osxkeychain
