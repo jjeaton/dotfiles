@@ -21,6 +21,7 @@ Steps:
 5. Change shell to zsh `sudo sh -c "echo '/usr/local/bin/zsh' >> /etc/shells"`
 	1. Verify with `cat /etc/shells | grep /usr/local/bin/zsh`
 	2. Change shell `chsh -s /usr/local/bin/zsh`
+    3. Install oh-my-zsh `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
 2. Run `./install.sh`.
 4. Emoji substitutions were downloaded to `assets/config/emoji-substitutions.plist` drag them into the pane in Preferences > Keyboard > Text.
 1. Set up Dropbox and ensure it is synced.
@@ -72,3 +73,16 @@ App configuration managed by mackup:
 ### Install other apps
 
 * Adobe: Photoshop CS6/CC
+* MAMP Pro
+* Older version of Textexpander (pre-subscription)
+* PDFPenPro
+* Tor
+* uTorrent / Transmission
+
+### Additional configuration
+
+* Alfred: [Configure Dropbox sync](https://www.alfredapp.com/help/advanced/sync/)
+* Transmit: Enable favorites syncing via Dropbox
+* Google Chrome: Login to Profile
+* Firefox: Login to Firefox Sync
+* Add all SSH keys to the ssh-agent (with passphrase) `ssh-add -K ~/.ssh/private-key-name`
