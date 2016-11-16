@@ -100,6 +100,7 @@ brew install zsh
 brew install zsh-completions
 
 # Casks
+brew cask install adium
 brew cask install aerial
 brew cask install alfred
 brew cask install appcleaner
@@ -107,35 +108,53 @@ brew cask install bartender
 brew cask install bettertouchtool
 brew cask install caffeine
 brew cask install cheatsheet
+brew cask install clarify
+brew cask install cloudup
+brew cask install codekit
 brew cask install crashplan
 brew cask install dash
 brew cask install docker
 brew cask install dropbox
+brew cask install fantastical
+brew cask install fastscripts
 brew cask install firefox
 brew cask install flux
 brew cask install fluid
 brew cask install google-chrome
 brew cask install hazel
 brew cask install iterm2
+brew cask install imageoptim
 brew cask install jumpcut
 brew cask install lastpass
+brew cask install logitech-control-center
+brew cask install macgdbp
 brew cask install marked
+# brew cask install microsoft-office
 brew cask install nvalt
+brew cask install omnidisksweeper
+# brew cask install path-finder
 brew cask install phpstorm
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
+brew cask install quickbooks
 brew cask install rescuetime
+brew cask install sequel-pro
+brew cask install skim
 brew cask install skype
 brew cask install slack
-brew cask install sequel-pro
 brew cask install sqlitebrowser
 brew cask install soulver
 brew cask install sourcetree
+brew cask install spotify
 brew cask install superduper
+# brew cask install textexpander
 brew cask install transmit
+brew cask install tunnelbear
 brew cask install virtualbox
 brew cask install vagrant
 brew cask install vagrant-manager
 brew cask install vlc
+brew cask install xscope
+brew cask install zoomus
 
 # Fonts
 brew cask install font-inconsolata-dz

@@ -17,6 +17,8 @@ mv composer.phar /usr/local/bin/composer
 	laravel/valet psy/psysh \
 	apigen/apigen behat/behat
 
+# Install Homestead
+
 # Install Laravel Valet
 $HOME/.composer/vendor/bin/valet install
 valet domain app
@@ -33,3 +35,5 @@ wp --info
 # install vvv if not exists
 
 # Configure vvv
+
+# Install vip-quickstart
