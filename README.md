@@ -10,6 +10,7 @@ Steps:
 1. Clone the repo: `git clone git@github.com:jjeaton/dotfiles.git ~/.dotfiles`.
 2. Create `.localrc` for local environment variables and customizations.
 3. Create `.slack` for Day One to Slack workflow:
+
     ```
     SLACK_TOKEN_RS=
     SLACK_CHANNEL_STANDUP=
@@ -34,6 +35,7 @@ App configuration managed by mackup:
 * bettertouchtool
 * caffeine
 * composer
+* custom-files (.gitignore_global)
 * mackup
 * dash
 * flux
@@ -48,10 +50,11 @@ App configuration managed by mackup:
 * scrivener
 * services (OS X Library/Services)
 * soulver
+* ssh-config (custom sync of .ssh/config)
 * sublime-text-3 (Packages/User directory)
+* subversion
 * textexpander
 * wp-cli
-* .gitignore_global
 
 ### Install all previous App Store purchases
 
@@ -66,3 +69,6 @@ App configuration managed by mackup:
 * Evernote
 * Kindle
 
+### Install other apps
+
+* Adobe: Photoshop CS6/CC
