@@ -26,8 +26,10 @@ Steps:
 4. Emoji substitutions were downloaded to `assets/config/emoji-substitutions.plist` drag them into the pane in Preferences > Keyboard > Text.
 1. Set up Dropbox and ensure it is synced.
 2. Install remaining apps that aren't supported by brew-cask.
+3. Open Sublime Text 3 and install Package Control before syncing preferences with Mackup.
 5. Link the mackup configuration into home (otherwise it won't register our custom backup directory) `ln -s ~/Dropbox\ \(Personal\)/Backups/mackup/.mackup.cfg ~/.mackup.cfg`
 6. Run `mackup restore` to link the mackup configuration files.
+7. Run `.macos` to configure macOS settings.
 7. Run `./node/install.sh` to install nvm, node, npm and global npm packages.
 8. Run `nvm use default` or restart shell
 
@@ -45,7 +47,7 @@ App configuration managed by mackup:
 * hazel
 * jumpcut
 * nvalt
-* oh-my-zsh (custom directory)
+* oh-my-zsh-custom (custom directory)
 * phpstorm
 * s3cmd
 * scrivener
@@ -61,7 +63,7 @@ App configuration managed by mackup:
 
 * Soulver
 * Slack
-* Glui
+* Glui (no longer available)
 * Day One
 * Frank DeLoupe
 * ForkLift
@@ -70,11 +72,12 @@ App configuration managed by mackup:
 * Evernote
 * Kindle
 
+
 ### Install other apps
 
+* [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
 * Adobe: Photoshop CS6/CC
-* MAMP Pro
-* Older version of Textexpander (pre-subscription)
+* [MAMP Pro](https://www.mamp.info/en/downloads/)
 * PDFPenPro
 * Tor
 * uTorrent / Transmission
@@ -82,7 +85,17 @@ App configuration managed by mackup:
 ### Additional configuration
 
 * Alfred: [Configure Dropbox sync](https://www.alfredapp.com/help/advanced/sync/)
+* iTerm2: Configure to load preferences from ~/Dropbox/Backups/iterm2
 * Transmit: Enable favorites syncing via Dropbox
 * Google Chrome: Login to Profile
 * Firefox: Login to Firefox Sync
 * Add all SSH keys to the ssh-agent (with passphrase) `ssh-add -K ~/.ssh/private-key-name`
+
+### Configure licenses
+
+* BetterTouchTool (Lastpass)
+* Alfred 3 (lastpass)
+* Sublime Text 3 (lastpass)
+* Dash (lastpass)
+* Fantastical 2 (lastpass)
+* 
