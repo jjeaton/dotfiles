@@ -56,6 +56,7 @@ brew install ack
 brew install awscli
 brew install bash-completion
 brew install dark-mode
+brew install doxygen
 brew install dnsmasq
 brew install dos2unix
 brew install ffmpeg
@@ -104,6 +105,7 @@ brew cask install adium
 brew cask install aerial
 brew cask install alfred
 brew cask install appcleaner
+brew cask install atom
 brew cask install bartender
 brew cask install bettertouchtool
 brew cask install caffeine
@@ -120,6 +122,7 @@ brew cask install fastscripts
 brew cask install firefox
 brew cask install flux
 brew cask install fluid
+brew cask install go2shell
 brew cask install google-chrome
 brew cask install hazel
 brew cask install iterm2
@@ -145,8 +148,9 @@ brew cask install sqlitebrowser
 brew cask install soulver
 brew cask install sourcetree
 brew cask install spotify
+brew cask install sublime-text
 brew cask install superduper
-# brew cask install textexpander
+brew cask install textexpander # Installs the old non-Sass version.
 brew cask install transmit
 brew cask install tunnelbear
 brew cask install virtualbox
@@ -162,3 +166,4 @@ brew cask install font-inconsolata-dz-for-powerline
 
 # Remove outdated versions from the cellar.
 brew cleanup
+
