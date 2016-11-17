@@ -51,3 +51,6 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" Open git commit messages in insert mode
+au FileType gitcommit execute "normal! O" | startinsert
+
