@@ -3,6 +3,12 @@
 # Install local development environment
 # #############################################################################
 
+# Install python tools and ansible
+pip install --upgrade pip setuptools
+
+# Install ansible
+pip install ansible
+
 # Create a Sites directory
 # This is a default directory for macOS user accounts but doesn't comes pre-installed
 mkdir -p $HOME/Sites
