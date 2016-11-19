@@ -90,6 +90,8 @@ App configuration managed by mackup:
 * Google Chrome: Login to Profile
 * Firefox: Login to Firefox Sync
 * Add all SSH keys to the ssh-agent (with passphrase) `ssh-add -K ~/.ssh/private-key-name`
+* Crashplan: Configure backup
+* SuperDuper: Configure backup
 
 ### Configure licenses
 
@@ -98,4 +100,5 @@ App configuration managed by mackup:
 * Sublime Text 3 (lastpass)
 * Dash (lastpass)
 * Fantastical 2 (lastpass)
-* 
+* Marked 2 (lastpass)
+
