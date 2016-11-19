@@ -166,4 +166,3 @@ brew cask install font-inconsolata-dz-for-powerline
 
 # Remove outdated versions from the cellar.
 brew cleanup
-
