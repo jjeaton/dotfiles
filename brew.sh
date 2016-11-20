@@ -94,6 +94,7 @@ brew install tmux
 brew install tree
 
 brew install vv
+brew install wakeonlan
 brew install watchman
 brew install wget
 brew install xz
