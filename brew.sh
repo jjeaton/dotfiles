@@ -5,6 +5,8 @@
 # This installs some of the common dependencies needed (or at least desired)
 # using Homebrew.
 
+source $DOTFILES/bash/confirm.sh
+
 # Check for Homebrew
 if test ! $(which brew)
 then
@@ -75,7 +77,8 @@ brew install lynx
 
 brew install mackup
 brew install macvim
-brew install mongodb
+confirm "Install mariadb? [y/N]" && brew install mariadb
+confirm "Install mongodb? [y/N]" &&  brew install mongodb
 brew install multimarkdown
 brew install php70
 # See https://github.com/Homebrew/homebrew-php/issues/2544 if issues.

@@ -21,6 +21,9 @@ alias mpecl='/Applications/MAMP/bin/php/php5.5.3/bin/pecl'
 # laravel
 alias artisan='php artisan'
 
+# composer
+alias composer="php -d memory_limit=-1 -n /usr/local/bin/composer"
+
 # networking
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
