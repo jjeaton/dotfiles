@@ -79,7 +79,8 @@ confirm "Do you want to install local vvv-sites? (~/.vvv-sites) [y/N]"
 if [[ $? -eq 0 ]]; then
 	if [[ -f "$HOME/.vvv-sites" ]]; then
 		source $HOME/.vvv-sites
-		echo "Run `vagrant up --provision` to set up vvv after copying over config."
+		echo "Run `syncvvv restore` copying vvv config."
+		echo "Run `vagrant up --provision` to set up vvv."
 	fi
 fi
 
