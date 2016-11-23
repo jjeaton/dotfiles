@@ -5,10 +5,12 @@ function syncvvv() {
 	case "$type" in
 		backup )
 			echo 'Backing up vvv/config...'
+			cp -r ~/Sites/vvv/config ~/Temp
 			cp -r ~/Sites/vvv/config ~/Dropbox/Backups/vvv/
 			rm -rf ~/Sites/vvv/config
 			ln -s ~/Dropbox/Backups/vvv/config ~/Sites/vvv/config
 			echo 'Backing up vvv/database...'
+			cp -r ~/Sites/vvv/database ~/Temp
 			cp -r ~/Sites/vvv/database ~/Dropbox/Backups/vvv/
 			rm -rf ~/Sites/vvv/database
 			ln -s ~/Dropbox/Backups/vvv/database ~/Sites/vvv/database
