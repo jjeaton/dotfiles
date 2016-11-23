@@ -265,7 +265,9 @@ defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
 # Dropbox                                                                     #
 ###############################################################################
 
-ln -s "${HOME}/Dropbox (Personal)" "${HOME}/Dropbox"
+if [[ `readlink "${HOME}/Dropbox"` != "${HOME}/Dropbox (Personal)" ]]; then
+	ln -s "${HOME}/Dropbox (Personal)" "${HOME}/Dropbox"
+fi
 
 # Create a Temp directory
 mkdir -p ~/Temp
