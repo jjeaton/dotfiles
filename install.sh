@@ -10,6 +10,8 @@
 # #############################################################################
 DOTFILES_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"  # dotfiles directory
 
+source $DOTFILES_ROOT/bash/confirm.sh
+
 set -e
 echo ''
 
@@ -199,7 +201,7 @@ configure_vim
 # #############################################################################
 # OS X Config
 # #############################################################################
-download_emoji_substitutions
-app_icons
+confirm "Download emoji substitutions? [y/N]" && download_emoji_substitutions
+confirm "Install ST3 icon? [y/N]" && app_icons
 
 print_end
