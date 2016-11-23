@@ -75,14 +75,16 @@ if [[ $? -eq 0 ]]; then
 fi
 
 # Configure vvv
-# source local file with `vv create --files` commands to install.
-# ensure init-custom.sql lines are added too.
-# sync db and nginx config to dropbox on mac pro
-# sync db and nginx config from dropbox on macbook pro
-# vagrant provision
+confirm "Do you want to install local vvv-sites? (~/.vvv-sites) [y/N]"
+if [[ $? -eq 0 ]]; then
+	if [[ -f "$HOME/.vvv-sites" ]]; then
+		source $HOME/.vvv-sites
+		echo "Run `vagrant up --provision` to set up vvv after copying over config."
+	fi
+fi
 
 # Install vip-quickstart
-confirm "Do you want to install vip-quickstart? [y/N] "
+confirm "Do you want to install vip-quickstart? [y/N]"
 if [[ $? -eq 0 ]]; then
 	if [[ ! -d "${Sites}/vip-quickstart" ]]; then
 		echo -e "\nDownloading vip-quickstart"

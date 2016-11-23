@@ -52,6 +52,9 @@ fi
 # zsh completions.
 fpath=(/usr/local/share/zsh/site-functions /usr/local/share/zsh-completions $fpath)
 
+# vv completions.
+source $(echo $(which vv)-completions)
+
 # Load z.
 . `brew --prefix`/etc/profile.d/z.sh
 
