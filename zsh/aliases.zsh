@@ -27,7 +27,7 @@ alias localip="ipconfig getifaddr en0"
 alias pt='ping google.com'
 alias flushdns='dscacheutil -flushcache;sudo killall -HUP mDNSResponder;'
 alias fixhosts='sudo chmod +a "josh allow write,append" /etc/hosts'
-alias wakepro='wakeonlan 54:E4:3A:F1:89:EF'
+alias wakepro='wakeonlan "$MACPRO"'
 
 # Recursively remove .DS_Store files
 alias cleanupds="find . -type f -name '*.DS_Store' -ls -delete"

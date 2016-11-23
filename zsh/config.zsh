@@ -65,3 +65,6 @@ export HISTFILESIZE="${HISTSIZE}";
 export HISTCONTROL='ignoreboth';
 
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
+
+# AWS default to work profile.
+export AWS_DEFAULT_PROFILE=reaktiv

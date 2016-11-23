@@ -1,0 +1,8 @@
+# While zsh is my main shell
+# Bash is generally used for scripting
+
+# Shortcut to this dotfiles path is $DOTFILES
+export DOTFILES=$HOME/.dotfiles
+
+# Source custom bash functions for scripting
+source $DOTFILES/bash/confirm.sh
