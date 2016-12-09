@@ -84,6 +84,7 @@ App configuration managed by mackup:
 * Tor
 * uTorrent / Transmission
 * Hyper
+* Unclutter (Dropbox sync)
 
 ### Additional configuration
 
@@ -106,4 +107,5 @@ App configuration managed by mackup:
 * Dash (lastpass)
 * Fantastical 2 (lastpass)
 * Marked 2 (lastpass)
+* Unclutter (lastpass)
 
