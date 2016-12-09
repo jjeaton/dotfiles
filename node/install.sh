@@ -12,7 +12,22 @@ nvm install node
 nvm use node
 nvm alias default node
 
-npm install -g aglio babel-cli bower coffee-script dredd ejs-compile eslint grunt-cli gulp jshint json mocha npm-check-updates phplint trash-cli
+npm install -g \
+	aglio \
+	babel-cli \
+	bower \
+	coffee-script \
+	dredd \
+	ejs-compile \
+	eslint \
+	grunt-cli \
+	gulp \
+	jshint \
+	json \
+	mocha \
+	npm-check-updates \
+	phplint \
+	trash-cli
 
 echo ''
 echo 'You may want to check your ~/.zshrc to remove any lines added by the installer.'
