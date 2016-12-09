@@ -77,10 +77,12 @@ App configuration managed by mackup:
 
 * [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
 * Adobe: Photoshop CS6/CC
+* Microsoft Office 365
 * [MAMP Pro](https://www.mamp.info/en/downloads/)
 * PDFPenPro
 * Tor
 * uTorrent / Transmission
+* Hyper
 
 ### Additional configuration
 
@@ -92,6 +94,8 @@ App configuration managed by mackup:
 * Add all SSH keys to the ssh-agent (with passphrase) `ssh-add -K ~/.ssh/private-key-name`
 * Crashplan: Configure backup
 * SuperDuper: Configure backup
+* vv: Run vv once to find vvv path
+* Day One: Configure Dropbox sync
 
 ### Configure licenses
 
