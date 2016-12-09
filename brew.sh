@@ -134,6 +134,7 @@ brew cask install hazel
 brew cask install iterm2
 brew cask install imageoptim
 brew cask install jumpcut
+brew cask install keyboard-maestro
 brew cask install lastpass
 brew cask install logitech-control-center
 brew cask install macgdbp
@@ -149,6 +150,7 @@ brew cask install rescuetime
 brew cask install sequel-pro
 brew cask install skim
 brew cask install skype
+brew cask install sketch
 brew cask install slack
 brew cask install sqlitebrowser
 brew cask install soulver
