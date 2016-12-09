@@ -271,3 +271,7 @@ fi
 
 # Create a Temp directory
 mkdir -p ~/Temp
+
+# Hide terminal banner
+touch ~/.hushlogin
+
