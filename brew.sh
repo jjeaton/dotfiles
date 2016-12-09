@@ -105,6 +105,7 @@ brew install youtube-dl
 brew install z
 brew install zsh
 brew install zsh-completions
+brew install zsh-syntax-highlighting
 
 # Casks
 brew cask install adium
