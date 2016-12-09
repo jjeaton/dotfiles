@@ -18,6 +18,9 @@ Steps:
 3. Remap Caps Lock to Ctrl for each keyboard.
    System Preferences > Keyboard > Modifier Keys...
 4. Run `./brew.sh` to install dependencies.
+7. Run `./node/install.sh` to install nvm, node, npm and global npm packages.
+8. Run `nvm use default` or restart shell
+    9. Ensure nvm, node and the pure-prompt are configured prior to switching to zsh. You may need to remove the `nvm-zsh` plugin and the oh-my-zsh theme `pure` from `zsh/config.zsh` temporarily until it's working.
 5. Change shell to zsh `sudo sh -c "echo '/usr/local/bin/zsh' >> /etc/shells"`
 	1. Verify with `cat /etc/shells | grep /usr/local/bin/zsh`
 	2. Change shell `chsh -s /usr/local/bin/zsh`
@@ -30,8 +33,6 @@ Steps:
 5. Link the mackup configuration into home (otherwise it won't register our custom backup directory) `ln -s ~/Dropbox\ \(Personal\)/Backups/mackup/.mackup.cfg ~/.mackup.cfg`
 6. Run `mackup restore` to link the mackup configuration files.
 7. Run `.macos` to configure macOS settings.
-7. Run `./node/install.sh` to install nvm, node, npm and global npm packages.
-8. Run `nvm use default` or restart shell
 
 App configuration managed by mackup:
 
