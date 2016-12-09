@@ -6,7 +6,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'mattn/emmet-vim'
+"Plugin 'mattn/emmet-vim'
 Plugin 'mhartington/oceanic-next'
 Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/nerdtree'
