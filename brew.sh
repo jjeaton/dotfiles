@@ -165,6 +165,7 @@ brew cask install tunnelbear
 brew cask install virtualbox
 brew cask install vagrant
 brew cask install vagrant-manager
+brew cask install visual-studio-code
 brew cask install vlc
 brew cask install xscope
 brew cask install zoomus
