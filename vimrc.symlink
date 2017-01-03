@@ -5,6 +5,7 @@ source ~/.vim/bundles.vim
 syntax on
 set nu
 " filetype indent plugin on
+set backspace=2 " Fix backspace to work like other apps
 
 " Necessary to get color scheme to override iTerm's
 set t_Co=256
