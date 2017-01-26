@@ -35,7 +35,9 @@ if [[ $? -eq 0 ]]; then
 		laravel/installer \
 		laravel/lumen-installer \
 		laravel/valet \
-		psy/psysh
+		psy/psysh \
+		wp-coding-standards/wpcs
+	phpcs --config-set installed_paths $HOME/.composer/vendor/wp-coding-standards/wpcs
 fi
 
 # Install Laravel Valet
