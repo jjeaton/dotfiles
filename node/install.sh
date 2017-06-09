@@ -34,6 +34,7 @@ if [[ $? -eq 0 ]]; then
 		babel-cli \
 		bower \
 		coffee-script \
+		create-react-app \
 		dredd \
 		ejs-compile \
 		eslint \

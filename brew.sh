@@ -49,7 +49,7 @@ brew install moreutils
 # Don’t forget to add `$(brew --prefix findutils)/libexec/gnubin` to `$PATH`.
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
-brew install gnu-sed --with-default-names
+# brew install gnu-sed --with-default-names
 
 # Install more recent versions of some macOS tools.
 brew install vim --with-override-system-vi
@@ -64,9 +64,11 @@ brew install dos2unix
 brew install ffmpeg
 brew install flow
 brew install git
+brew install heroku
 brew install httpie
 brew install hub
 brew install imagemagick --with-webp
+brew install jq
 
 brew install lftp
 brew install libav
@@ -88,6 +90,7 @@ brew install phpunit
 
 brew install python
 brew install python3
+brew install ruby
 
 brew install s3cmd
 brew install ssh-copy-id
@@ -147,6 +150,7 @@ brew cask install omnidisksweeper
 brew cask install phpstorm
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
 brew cask install quickbooks
+brew cask install recordit
 brew cask install rescuetime
 brew cask install sequel-pro
 brew cask install skim
