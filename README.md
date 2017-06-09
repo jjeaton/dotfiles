@@ -84,6 +84,7 @@ App configuration managed by mackup:
 * Tor
 * uTorrent / Transmission
 * Hyper
+* Skyfonts
 * Unclutter (Dropbox sync)
 
 ### Additional configuration

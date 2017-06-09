@@ -33,6 +33,7 @@ if [[ $? -eq 0 ]]; then
 		aglio \
 		babel-cli \
 		bower \
+		browser-sync \
 		coffee-script \
 		dredd \
 		ejs-compile \

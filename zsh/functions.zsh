@@ -66,3 +66,8 @@ function fs() {
 function digg() {
 	dig +nocmd "$1" any +multiline +noall +answer;
 }
+
+# mkpassword create password hash function
+function mkpassword() {
+	python -c "import crypt,random,string; print crypt.crypt(raw_input('clear-text password: '), '\$6\$' + ''.join([random.choice(string.ascii_letters + string.digits) for _ in range(16)]))"
+}
