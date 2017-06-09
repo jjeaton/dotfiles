@@ -44,3 +44,8 @@ if [ -f ~/.zshrc_local ]; then
     source ~/.zshrc_local
 fi
 
+# Load python virtualenvwrapper
+if [ -f ~/usr/local/bin/virtualenvwrapper.sh ]; then
+	source /usr/local/bin/virtualenvwrapper.sh
+fi
+
