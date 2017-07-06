@@ -82,10 +82,10 @@ brew install macvim
 confirm "Install mariadb? [y/N]" && brew install mariadb
 confirm "Install mongodb? [y/N]" &&  brew install mongodb
 brew install multimarkdown
-brew install php70
+brew install php71
 # See https://github.com/Homebrew/homebrew-php/issues/2544 if issues.
-brew install php70-intl
-brew install php70-xdebug
+brew install php71-intl
+brew install php71-xdebug
 brew install phpunit
 
 brew install python
