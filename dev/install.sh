@@ -54,6 +54,13 @@ if [[ $? -eq 0 ]]; then
 	chmod +x wp-cli.phar
 	sudo mv wp-cli.phar /usr/local/bin/wp
 	wp --info
+
+	# Install wp-cli packages
+	wp package install runcommand/dist-archive
+	wp package install wp-cli/restful
+	wp package install aaemnnosttv/wp-cli-valet-command
+	wp package install runcommand/user-reset-password
+	wp package install aaemnnosttv/wp-cli-dotenv-command
 fi
 
 # Install vvv if not exists
