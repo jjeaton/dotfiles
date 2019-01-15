@@ -55,6 +55,7 @@ brew install findutils
 brew install vim --with-override-system-vi
 
 brew install ack
+brew install autojump
 brew install awscli
 brew install bash-completion
 brew install dark-mode
