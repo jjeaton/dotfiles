@@ -5,7 +5,6 @@ Steps:
 1. Update macOS to the latest version with the App Store
 1. Install Xcode from the App Store, open it and accept the license agreement
 1. Install macOS Command Line Tools by running xcode-select --install
-2. [Disable iCloud Photos](http://www.howtogeek.com/215331/how-to-disable-os-xs-icloud-photo-and-video-sharing/)
 1. Copy public and private SSH keys to ~/.ssh and make sure they're set to 600
 1. Clone the repo: `git clone git@github.com:jjeaton/dotfiles.git ~/.dotfiles`.
 2. Create `.localrc` for local environment variables and customizations.
@@ -77,9 +76,9 @@ App configuration managed by mackup:
 ### Install other apps
 
 * [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
+* IVPN
 * Adobe: Photoshop CS6/CC
 * Microsoft Office 365
-* [MAMP Pro](https://www.mamp.info/en/downloads/)
 * PDFPenPro
 * Tor
 * uTorrent / Transmission
