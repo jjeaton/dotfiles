@@ -83,11 +83,20 @@ brew install macvim
 confirm "Install mariadb? [y/N]" && brew install mariadb
 confirm "Install mongodb? [y/N]" &&  brew install mongodb
 brew install multimarkdown
-brew install php71
+
+
+brew install redis
+brew install openssl
+brew install --with-openssl curl
+# https://github.com/laravel/valet/issues/329#issuecomment-287031905
+# https://stackoverflow.com/questions/26461966/osx-10-10-curl-post-to-https-url-gives-sslread-error/26538127#26538127
+brew install --with-homebrew-curl php71
+brew install php71-redis
 # See https://github.com/Homebrew/homebrew-php/issues/2544 if issues.
 brew install php71-intl
 brew install php71-xdebug
 brew install phpunit
+brew install xdebug-osx
 
 brew install python
 brew install python3
