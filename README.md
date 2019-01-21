@@ -102,6 +102,7 @@ App configuration managed by mackup:
 
 ### Configure licenses
 
+
 * BetterTouchTool (Lastpass)
 * Alfred 3 (lastpass)
 * Sublime Text 3 (lastpass)
@@ -109,4 +110,6 @@ App configuration managed by mackup:
 * Fantastical 2 (lastpass)
 * Marked 2 (lastpass)
 * Unclutter (lastpass)
+
+    Automate enabling xdebug in php7.1
 
