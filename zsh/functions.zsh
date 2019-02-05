@@ -7,12 +7,6 @@ function gcbr() {
 	fi
 }
 
-# Open in Path Finder
-# http://alexking.org/blog/2011/11/20/open-in-pathfinder-from-the-terminal
-function pf () {
-	open -a "Path Finder.app" $1;
-}
-
 # Image functions
 # http://brettterpstra.com/2013/07/24/bash-image-tools-for-web-designers/
 
@@ -70,4 +64,11 @@ function digg() {
 # mkpassword create password hash function
 function mkpassword() {
 	python -c "import crypt,random,string; print crypt.crypt(raw_input('clear-text password: '), '\$6\$' + ''.join([random.choice(string.ascii_letters + string.digits) for _ in range(16)]))"
+}
+
+# add separator to dock
+# https://superuser.com/questions/131594/can-i-add-separators-in-the-mac-os-x-dock
+function dockseparator() {
+	defaults write com.apple.dock persistent-apps -array-add '{ "tile-type" = "spacer-tile"; }'
+	killall Dock
 }

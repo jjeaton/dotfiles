@@ -30,8 +30,9 @@ fi
 confirm "Install global composer packages? [y/N]"
 if [[ $? -eq 0 ]]; then
 	/usr/local/bin/composer global require \
-		apigen/apigen \
+		banago/phploy \
 		behat/behat \
+		dealerdirect/phpcodesniffer-composer-installer
 		laravel/installer \
 		laravel/lumen-installer \
 		laravel/valet \
@@ -56,10 +57,9 @@ if [[ $? -eq 0 ]]; then
 	wp --info
 
 	# Install wp-cli packages
-	wp package install runcommand/dist-archive
+	wp package install wp-cli/dist-archive-command
 	wp package install wp-cli/restful
 	wp package install aaemnnosttv/wp-cli-valet-command
-	wp package install runcommand/user-reset-password
 	wp package install aaemnnosttv/wp-cli-dotenv-command
 fi
 
@@ -68,7 +68,6 @@ confirm "Do you want to install vvv? [y/N] "
 if [[ $? -eq 0 ]]; then
 	# Install vvv dependencies
 	vagrant plugin install vagrant-hostsupdater
-	vagrant plugin install vagrant-triggers
 	vagrant plugin install vagrant-vbguest
 
 	if [[ ! -d "${Sites}/vvv" ]]; then
@@ -90,16 +89,5 @@ if [[ $? -eq 0 ]]; then
 		source $HOME/.vvv-sites
 		echo "Run `syncvvv restore` copying vvv config."
 		echo "Run `vagrant up --provision` to set up vvv."
-	fi
-fi
-
-# Install vip-quickstart
-confirm "Do you want to install vip-quickstart? [y/N]"
-if [[ $? -eq 0 ]]; then
-	if [[ ! -d "${Sites}/vip-quickstart" ]]; then
-		echo -e "\nDownloading vip-quickstart"
-		git clone --recursive https://github.com/Automattic/vip-quickstart.git "$Sites/vip-quickstart"
-	else
-		echo -e "\nvip-quickstart already installed, please update manually."
 	fi
 fi

@@ -3,7 +3,7 @@ export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
-ZSH_THEME="pure"
+ZSH_THEME=""
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
@@ -22,7 +22,7 @@ export NVM_LAZY_LOAD=true
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git extract copydir sublime zsh-nvm)
+plugins=(git extract copydir sublime)
 
 # User configuration
 
@@ -55,9 +55,6 @@ fi
 # zsh completions.
 fpath=(/usr/local/share/zsh/site-functions /usr/local/share/zsh-completions $fpath)
 
-# vv completions.
-source $(echo $(which vv)-completions)
-
 # Load z.
 . `brew --prefix`/etc/profile.d/z.sh
 
@@ -74,3 +71,10 @@ export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:/usr/local/opt/findutils
 
 # AWS default to work profile.
 export AWS_DEFAULT_PROFILE=reaktiv
+
+# load pure prompt
+autoload -U promptinit; promptinit
+prompt pure
+
+# load autojump
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
