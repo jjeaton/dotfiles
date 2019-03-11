@@ -173,13 +173,6 @@ download_emoji_substitutions () {
   success 'downloaded emoji substitutions, drag them into Prefs > Keyboard > Text'
 }
 
-app_icons () {
-  # Install Sublime Text icon
-  info 'installing sublime text icon'
-  cp "$DOTFILES_ROOT/assets/icons/st.icns" "/Applications/Sublime Text.app/Contents/Resources/Sublime Text.icns"
-  killall Dock
-}
-
 print_end () {
   echo ''
   echo '  All installed!'
@@ -202,6 +195,5 @@ configure_vim
 # OS X Config
 # #############################################################################
 confirm "Download emoji substitutions? [y/N]" && download_emoji_substitutions
-confirm "Install ST3 icon? [y/N]" && app_icons
 
 print_end
