@@ -79,6 +79,7 @@ brew install mackup
 confirm "Install mariadb? [y/N]" && brew install mariadb
 confirm "Install mongodb? [y/N]" &&  brew install mongodb
 brew install multimarkdown
+brew install mysql@5.7
 
 brew install nginx
 
