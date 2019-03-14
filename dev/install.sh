@@ -41,6 +41,12 @@ if [[ $? -eq 0 ]]; then
 	phpcs --config-set installed_paths $HOME/.composer/vendor/wp-coding-standards/wpcs
 fi
 
+# Install xdebug
+confirm "Install xdebug? [y/N]"
+if [[ $? -eq 0 ]]; then
+	pecl install xdebug
+fi
+
 # Install Laravel Valet
 confirm "Install Laravel Valet? [y/N]"
 if [[ $? -eq 0 ]]; then
