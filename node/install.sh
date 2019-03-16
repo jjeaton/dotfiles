@@ -28,6 +28,7 @@ if [[ $? -eq 0 ]]; then
 		npm-check-updates \
 		phplint \
 		pure-prompt \
+		react-native-cli \
 		trash-cli
 fi
 
