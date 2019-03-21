@@ -23,6 +23,10 @@ done
 autoload -U compinit
 compinit
 
+# allow zsh to read bash completions
+autoload -U bashcompinit
+bashcompinit
+
 # load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}
 do
