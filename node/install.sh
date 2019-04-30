@@ -13,6 +13,7 @@ fi
 confirm "Install npm global packages? [y/N]"
 if [[ $? -eq 0 ]]; then
 	npm install -g \
+		@automattic/vip \
 		babel-cli \
 		browser-sync \
 		coffeescript \
