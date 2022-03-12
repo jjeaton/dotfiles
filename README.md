@@ -9,12 +9,6 @@ Steps:
 1. Copy public and private SSH keys to ~/.ssh and make sure they're set to 600
 1. Clone the repo: `git clone git@github.com:jjeaton/dotfiles.git ~/.dotfiles`.
 2. Create `.localrc` for local environment variables and customizations.
-3. Create `.slack` for Day One to Slack workflow:
-
-    ```
-    SLACK_TOKEN_RS=
-    SLACK_CHANNEL_STANDUP=
-    ```
 3. Remap Caps Lock to Ctrl for each keyboard.
    System Preferences > Keyboard > Modifier Keys...
 4. Run `./brew.sh` to install dependencies.
@@ -32,6 +26,7 @@ Steps:
 5. Link the mackup configuration into home (otherwise it won't register our custom backup directory) `ln -s ~/Dropbox\ \(Personal\)/Backups/mackup/.mackup.cfg ~/.mackup.cfg`
 6. Run `mackup restore` to link the mackup configuration files.
 7. Run `.macos` to configure macOS settings.
+8. Install Inconsolata-dz font from `assets` folder.
 
 App configuration managed by mackup:
 
@@ -63,11 +58,8 @@ App configuration managed by mackup:
 
 * Soulver
 * Slack
-* Glui (no longer available)
 * Day One
 * Frank DeLoupe
-* ForkLift
-* GeekTool
 * The Unarchiver
 * Evernote
 * Kindle
