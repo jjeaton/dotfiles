@@ -143,7 +143,7 @@ brew install --cask keyboard-maestro
 brew install --cask marked
 # brew install --cask microsoft-office
 # brew install --cask omnidisksweeper
-brew install --cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv qlimagesize webpquicklook suspicious-package
+brew install --cask qlmarkdown quicklook-json qlprettypatch quicklook-csv qlimagesize webpquicklook suspicious-package
 # brew install --cask recordit
 # brew install --cask rescuetime
 # brew install --cask sequel-pro
