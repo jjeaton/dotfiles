@@ -2,6 +2,7 @@
 
 # set -e
 
+export DOTFILES=$HOME/.dotfiles
 source $DOTFILES/bash/confirm.sh
 
 confirm "Install node? [y/N]"
@@ -16,9 +17,7 @@ if [[ $? -eq 0 ]]; then
 		@automattic/vip \
 		babel-cli \
 		browser-sync \
-		coffeescript \
 		create-react-app \
-		ejs-compile \
 		eslint \
 		grunt-cli \
 		gulp \

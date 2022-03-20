@@ -31,10 +31,8 @@ confirm "Install global composer packages? [y/N]"
 if [[ $? -eq 0 ]]; then
 	/usr/local/bin/composer global require \
 		banago/phploy \
-		behat/behat \
-		dealerdirect/phpcodesniffer-composer-installer
+		dealerdirect/phpcodesniffer-composer-installer \
 		laravel/installer \
-		laravel/lumen-installer \
 		laravel/valet \
 		psy/psysh \
 		wp-coding-standards/wpcs
@@ -51,7 +49,6 @@ fi
 confirm "Install Laravel Valet? [y/N]"
 if [[ $? -eq 0 ]]; then
 	$HOME/.composer/vendor/bin/valet install
-	valet domain app
 fi
 
 # Install wp-cli
@@ -65,8 +62,6 @@ if [[ $? -eq 0 ]]; then
 	# Install wp-cli packages
 	wp package install wp-cli/dist-archive-command
 	wp package install wp-cli/restful
-	wp package install aaemnnosttv/wp-cli-valet-command
-	wp package install aaemnnosttv/wp-cli-dotenv-command
 fi
 
 # Install vvv if not exists

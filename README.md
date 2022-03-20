@@ -14,10 +14,10 @@ Steps:
 4. Run `./brew.sh` to install dependencies.
 7. Run `./node/install.sh` to install node, npm and global npm packages.
 9. Ensure node and the pure-prompt are configured prior to switching to zsh. You may need to remove the oh-my-zsh theme `pure` from `zsh/config.zsh` temporarily until it's working.
-5. Change shell to zsh `sudo sh -c "echo '/usr/local/bin/zsh' >> /etc/shells"`
-	1. Verify with `cat /etc/shells | grep /usr/local/bin/zsh`
-	2. Change shell `chsh -s /usr/local/bin/zsh`
-    3. Install oh-my-zsh `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
+5. Change shell to zsh `sudo sh -c "echo '/opt/homebrew/bin/zsh' >> /etc/shells"`
+	1. Verify with `cat /etc/shells | grep /opt/homebrew/bin/zsh`
+	2. Change shell `chsh -s /opt/homebrew/bin/zsh`
+    3. Install oh-my-zsh `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 2. Run `./install.sh`.
 4. Emoji substitutions were downloaded to `assets/config/emoji-substitutions.plist` drag them into the pane in Preferences > Keyboard > Text.
 1. Set up Dropbox and ensure it is synced.
@@ -27,7 +27,7 @@ Steps:
 6. Run `mackup restore` to link the mackup configuration files.
 7. Run `.macos` to configure macOS settings.
 8. Install Inconsolata-dz font from `assets` folder.
-
+9. [Load iterm2 settings](https://gitlab.com/gnachman/iterm2/-/issues/8029#note_200395054)
 App configuration managed by mackup:
 
 * bettertouchtool
