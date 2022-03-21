@@ -9,21 +9,15 @@ Steps:
 1. Copy public and private SSH keys to ~/.ssh and make sure they're set to 600
 1. Clone the repo: `git clone git@github.com:jjeaton/dotfiles.git ~/.dotfiles`.
 2. Create `.localrc` for local environment variables and customizations.
-3. Create `.slack` for Day One to Slack workflow:
-
-    ```
-    SLACK_TOKEN_RS=
-    SLACK_CHANNEL_STANDUP=
-    ```
 3. Remap Caps Lock to Ctrl for each keyboard.
    System Preferences > Keyboard > Modifier Keys...
 4. Run `./brew.sh` to install dependencies.
 7. Run `./node/install.sh` to install node, npm and global npm packages.
 9. Ensure node and the pure-prompt are configured prior to switching to zsh. You may need to remove the oh-my-zsh theme `pure` from `zsh/config.zsh` temporarily until it's working.
-5. Change shell to zsh `sudo sh -c "echo '/usr/local/bin/zsh' >> /etc/shells"`
-	1. Verify with `cat /etc/shells | grep /usr/local/bin/zsh`
-	2. Change shell `chsh -s /usr/local/bin/zsh`
-    3. Install oh-my-zsh `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
+5. Change shell to zsh `sudo sh -c "echo '/opt/homebrew/bin/zsh' >> /etc/shells"`
+	1. Verify with `cat /etc/shells | grep /opt/homebrew/bin/zsh`
+	2. Change shell `chsh -s /opt/homebrew/bin/zsh`
+    3. Install oh-my-zsh `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 2. Run `./install.sh`.
 4. Emoji substitutions were downloaded to `assets/config/emoji-substitutions.plist` drag them into the pane in Preferences > Keyboard > Text.
 1. Set up Dropbox and ensure it is synced.
@@ -32,6 +26,8 @@ Steps:
 5. Link the mackup configuration into home (otherwise it won't register our custom backup directory) `ln -s ~/Dropbox\ \(Personal\)/Backups/mackup/.mackup.cfg ~/.mackup.cfg`
 6. Run `mackup restore` to link the mackup configuration files.
 7. Run `.macos` to configure macOS settings.
+8. Install Inconsolata-dz font from `assets` folder.
+9. [Load iterm2 settings](https://gitlab.com/gnachman/iterm2/-/issues/8029#note_200395054)
 
 App configuration managed by mackup:
 
@@ -63,13 +59,8 @@ App configuration managed by mackup:
 
 * Soulver
 * Slack
-* Glui (no longer available)
 * Day One
-* Frank DeLoupe
-* ForkLift
-* GeekTool
 * The Unarchiver
-* Evernote
 * Kindle
 
 
@@ -77,13 +68,11 @@ App configuration managed by mackup:
 
 * [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
 * IVPN
-* Adobe: Photoshop CS6/CC
-* Microsoft Office 365
+* Adobe: Photoshop CC
+* Microsoft Office
 * PDFPenPro
 * Tor
 * uTorrent / Transmission
-* Hyper
-* Skyfonts
 * Unclutter (Dropbox sync)
 
 ### Additional configuration
@@ -94,21 +83,16 @@ App configuration managed by mackup:
 * Google Chrome: Login to Profile
 * Firefox: Login to Firefox Sync
 * Add all SSH keys to the ssh-agent (with passphrase) `ssh-add -K ~/.ssh/private-key-name`
-* Crashplan: Configure backup
+* Backblaze: Configure backup
 * SuperDuper: Configure backup
-* vv: Run vv once to find vvv path
 * Day One: Configure Dropbox sync
 
 ### Configure licenses
 
-
-* BetterTouchTool (Lastpass)
-* Alfred 3 (lastpass)
-* Sublime Text 3 (lastpass)
-* Dash (lastpass)
-* Fantastical 2 (lastpass)
-* Marked 2 (lastpass)
-* Unclutter (lastpass)
-
-    Automate enabling xdebug in php7.1
-
+* BetterTouchTool (1password)
+* Alfred 3 (1password)
+* Sublime Text 3 (1password)
+* Dash (1password)
+* Fantastical 2 (1password)
+* Marked 2 (1password)
+* Unclutter (1password)

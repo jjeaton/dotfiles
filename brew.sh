@@ -5,6 +5,8 @@
 # This installs some of the common dependencies needed (or at least desired)
 # using Homebrew.
 
+# Usually in PATH but need to add here as we haven't updated bash_profile yet.
+export DOTFILES=$HOME/.dotfiles
 source $DOTFILES/bash/confirm.sh
 
 # Check for Homebrew
@@ -15,7 +17,7 @@ then
   # Install the correct homebrew for each OS type
   if test "$(uname)" = "Darwin"
   then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   elif test "$(expr substr $(uname -s) 1 5)" = "Linux"
   then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
@@ -29,14 +31,12 @@ brew update
 # Upgrade any already-installed formula.
 brew upgrade
 
-brew tap caskroom/cask
-brew tap caskroom/fonts
-brew tap homebrew/boneyard
-brew tap homebrew/core
-brew tap homebrew/dupes
-# brew tap homebrew/php
+# brew tap caskroom/cask
+brew tap homebrew/cask-fonts
+brew tap heroku/brew
 brew tap homebrew/services
-brew tap homebrew/versions
+# brew tap homebrew/dupes
+# brew tap homebrew/versions
 
 # Install GNU core utilities (those that come with macOS are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
@@ -51,7 +51,7 @@ brew install findutils
 # brew install gnu-sed --with-default-names
 
 # Install more recent versions of some macOS tools.
-brew install vim --with-override-system-vi
+brew install vim
 
 brew install ack
 brew install autojump
@@ -61,12 +61,12 @@ brew install doxygen
 brew install dnsmasq
 brew install dos2unix
 brew install ffmpeg
-brew install flow
+#brew install flow
 brew install git
-brew install heroku/brew/heroku
+brew install heroku
 brew install httpie
 brew install hub
-brew install imagemagick --with-webp
+brew install imagemagick
 brew install jq
 
 brew install lftp
@@ -76,16 +76,15 @@ brew install lnav
 brew install lynx
 
 brew install mackup
-confirm "Install mariadb? [y/N]" && brew install mariadb
-confirm "Install mongodb? [y/N]" &&  brew install mongodb
+# confirm "Install mariadb? [y/N]" && brew install mariadb
+# confirm "Install mongodb? [y/N]" &&  brew install mongodb
 brew install multimarkdown
-brew install mysql@5.7
-
+brew install mysql
 brew install nginx
 
 brew install redis
 brew install openssl
-brew install --with-openssl curl
+brew install curl
 # https://github.com/laravel/valet/issues/329#issuecomment-287031905
 # https://stackoverflow.com/questions/26461966/osx-10-10-curl-post-to-https-url-gives-sslread-error/26538127#26538127
 brew install php
@@ -100,7 +99,6 @@ brew install python@2
 brew install ruby
 
 brew install s3cmd
-brew install ssh-copy-id
 brew install subversion
 brew install testssl
 brew install tmux
@@ -118,63 +116,56 @@ brew install zsh-completions
 brew install zsh-syntax-highlighting
 
 # Casks
-brew cask install adium
-brew cask install aerial
-# brew cask install alfred
-brew cask install appcleaner
-brew cask install atom
-brew cask install bartender
-brew cask install bettertouchtool
-brew cask install betterzip
-brew cask install caffeine
-brew cask install cheatsheet
-# brew cask install cloudup
-# brew cask install codekit
-# brew cask install crashplan
-brew cask install dash
-brew cask install docker
-brew cask install dropbox
-brew cask install fantastical
-brew cask install fastscripts
-# brew cask install firefox
-brew cask install flux
-# brew cask install fluid
-# brew cask install go2shell
-brew cask install google-chrome
-brew cask install hazel
-# brew cask install iterm2
-brew cask install imageoptim
-brew cask install jumpcut
-brew cask install keyboard-maestro
-brew cask install macgdbp
-brew cask install marked
-# brew cask install microsoft-office
-brew cask install nvalt
-brew cask install omnidisksweeper
-brew cask install phpstorm
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv qlimagesize webpquicklook suspicious-package
-brew cask install recordit
-brew cask install rescuetime
-brew cask install sequel-pro
-brew cask install skim
-brew cask install skype
-brew cask install sketch
-brew cask install spotify
-brew cask install sublime-text
-brew cask install superduper
-# brew cask install textexpander # Installs the old non-Sass version.
-brew cask install transmit
-brew cask install virtualbox
-brew cask install vagrant
-brew cask install vagrant-manager
-brew cask install visual-studio-code
-brew cask install vlc
-brew cask install xscope
-brew cask install zoomus
+# brew install --cask adium
+brew install --cask aerial
+# brew install --cask alfred
+# brew install --cask atom
+# brew install --cask bartender
+# brew install --cask bettertouchtool
+# brew install --cask betterzip
+brew install --cask caffeine
+# brew install --cask cheatsheet
+# brew install --cask dash
+# brew install --cask docker
+# brew install --cask dropbox
+# brew install --cask fantastical
+brew install --cask fastscripts
+# brew install --cask firefox
+# brew install --cask flux
+# brew install --cask go2shell
+# brew install --cask google-chrome
+# brew install --cask hazel
+# brew install --cask iterm2
+# brew install --cask imageoptim
+# brew install --cask jumpcut
+brew install --cask keyboard-maestro
+# brew install --cask macgdbp
+brew install --cask marked
+# brew install --cask microsoft-office
+# brew install --cask omnidisksweeper
+brew install --cask qlmarkdown quicklook-json qlprettypatch quicklook-csv qlimagesize webpquicklook suspicious-package
+# brew install --cask recordit
+# brew install --cask rescuetime
+# brew install --cask sequel-pro
+brew install --cask skim
+brew install --cask skype
+# brew install --cask sketch
+# brew install --cask spotify
+# brew install --cask sublime-text
+# brew install --cask superduper
+# brew install --cask textexpander # Installs the old non-Sass version.
+# brew install --cask transmit
+# brew install --cask virtualbox
+# brew install --cask vagrant
+# brew install --cask vagrant-manager
+brew install --cask visual-studio-code
+brew install --cask vlc
+# brew install --cask xscope
+# brew install --cask zoomus
 
 # Fonts
-brew cask install font-inconsolata-dz
-brew cask install font-inconsolata-dz-for-powerline
+# brew install --cask font-inconsolata-dz
+brew install --cask font-inconsolata-dz-for-powerline
 
 # Remove outdated versions from the cellar.
 brew cleanup
