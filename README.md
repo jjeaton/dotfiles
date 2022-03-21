@@ -28,6 +28,7 @@ Steps:
 7. Run `.macos` to configure macOS settings.
 8. Install Inconsolata-dz font from `assets` folder.
 9. [Load iterm2 settings](https://gitlab.com/gnachman/iterm2/-/issues/8029#note_200395054)
+
 App configuration managed by mackup:
 
 * bettertouchtool
@@ -59,9 +60,7 @@ App configuration managed by mackup:
 * Soulver
 * Slack
 * Day One
-* Frank DeLoupe
 * The Unarchiver
-* Evernote
 * Kindle
 
 
@@ -69,13 +68,11 @@ App configuration managed by mackup:
 
 * [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
 * IVPN
-* Adobe: Photoshop CS6/CC
-* Microsoft Office 365
+* Adobe: Photoshop CC
+* Microsoft Office
 * PDFPenPro
 * Tor
 * uTorrent / Transmission
-* Hyper
-* Skyfonts
 * Unclutter (Dropbox sync)
 
 ### Additional configuration
@@ -86,21 +83,16 @@ App configuration managed by mackup:
 * Google Chrome: Login to Profile
 * Firefox: Login to Firefox Sync
 * Add all SSH keys to the ssh-agent (with passphrase) `ssh-add -K ~/.ssh/private-key-name`
-* Crashplan: Configure backup
+* Backblaze: Configure backup
 * SuperDuper: Configure backup
-* vv: Run vv once to find vvv path
 * Day One: Configure Dropbox sync
 
 ### Configure licenses
 
-
-* BetterTouchTool (Lastpass)
-* Alfred 3 (lastpass)
-* Sublime Text 3 (lastpass)
-* Dash (lastpass)
-* Fantastical 2 (lastpass)
-* Marked 2 (lastpass)
-* Unclutter (lastpass)
-
-    Automate enabling xdebug in php7.1
-
+* BetterTouchTool (1password)
+* Alfred 3 (1password)
+* Sublime Text 3 (1password)
+* Dash (1password)
+* Fantastical 2 (1password)
+* Marked 2 (1password)
+* Unclutter (1password)
