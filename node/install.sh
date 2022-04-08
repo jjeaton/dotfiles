@@ -32,6 +32,12 @@ if [[ $? -eq 0 ]]; then
 		trash-cli
 fi
 
+confirm "Install nvm? [y/N]"
+if [[ $? -eq 0 ]]; then
+	# Install NVM without touching profile, as we've customized it ourselves
+	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | PROFILE="/dev/null" bash
+fi
+
 echo ''
 echo 'You may want to check your ~/.zshrc and ~/.bash_profile to remove any lines added by the installer.'
 echo ' Press [ENTER] to continue when ready.'
