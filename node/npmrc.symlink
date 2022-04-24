@@ -3,3 +3,4 @@
 # =================================
 @reaktivstudios:registry=https://npm.pkg.github.com/reaktivstudios
 //npm.pkg.github.com/:_authToken=${RKV_NPM_TOKEN}
+save=false
