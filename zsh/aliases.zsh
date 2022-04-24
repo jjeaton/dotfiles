@@ -17,7 +17,7 @@ alias vssh='vagrant ssh'
 alias artisan='php artisan'
 
 # composer
-alias composer="php -d memory_limit=-1 -n /usr/local/bin/composer"
+# alias composer="php -d memory_limit=-1 -n /usr/local/bin/composer"
 
 # networking
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -42,3 +42,25 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 # For example, to list all directories that contain a certain file:
 # find . -name .gitattributes | map dirname
 alias map="xargs -n1"
+
+# determine versions of PHP installed with HomeBrew
+installedPhpVersions=($(brew ls --versions | ggrep -E 'php(@.*)?\s' | ggrep -oP '(?<=\s)\d\.\d' | uniq | sort))
+
+# create alias for every version of PHP installed with HomeBrew
+for phpVersion in ${installedPhpVersions[*]}; do
+    value="{"
+
+    for otherPhpVersion in ${installedPhpVersions[*]}; do
+        if [ "${otherPhpVersion}" = "${phpVersion}" ]; then
+            continue
+        fi
+
+        # unlink other PHP version
+        value="${value} brew unlink php@${otherPhpVersion};"
+    done
+
+    # link desired PHP version
+    value="${value} brew link php@${phpVersion} --force --overwrite; } &> /dev/null && php -v"
+
+    alias "${phpVersion}"="${value}"
+done
