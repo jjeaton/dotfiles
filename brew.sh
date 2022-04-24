@@ -63,6 +63,7 @@ brew install dos2unix
 brew install ffmpeg
 #brew install flow
 brew install git
+brew install grep
 brew install heroku
 brew install httpie
 brew install hub
