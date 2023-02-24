@@ -35,11 +35,11 @@ function 64font() {
 
 # URL encode helpers (using Python)
 function urlencode() {
-	python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1])" "$1"
+	python -c "import sys; from urllib import parse; print(parse.quote_plus(sys.argv[1]))" "$1"
 }
 
 function urldecode() {
-	python -c "import sys, urllib as ul; print ul.unquote_plus(sys.argv[1])" "$1"
+	python -c "import sys; from urllib import parse; print(parse.unquote_plus(sys.argv[1]))" "$1"
 }
 
 # Determine size of a file or total size of a directory

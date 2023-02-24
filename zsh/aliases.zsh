@@ -9,6 +9,10 @@ alias rm='rm -i'
 
 alias nvml="[ -s "$NVM_DIR/nvm.sh" ] && \. '$NVM_DIR/nvm.sh'"
 
+# python2 is EOL
+alias python=python3
+alias pip=pip3
+
 # laravel
 alias artisan='php artisan'
 
