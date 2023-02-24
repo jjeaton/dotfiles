@@ -7,11 +7,7 @@ alias zs='source ~/.zshrc'
 alias t='trash'
 alias rm='rm -i'
 
-# vagrant
-alias v='vagrant'
-alias wpv='wp ssh --host=vagrant'
-alias vxdebug='vagrant ssh -c "xdebug_on"'
-alias vssh='vagrant ssh'
+alias nvml="[ -s "$NVM_DIR/nvm.sh" ] && \. '$NVM_DIR/nvm.sh'"
 
 # laravel
 alias artisan='php artisan'

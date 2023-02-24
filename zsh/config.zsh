@@ -81,4 +81,13 @@ prompt pure
 
 # load NVM
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use # This loads nvm
+# Disabled 2022-09-26 to load conditionally below
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use # This loads nvm
+
+# Attempt to increase terminal startup speed
+if [ -s "$NVM_DIR/nvm.sh" ]; then
+  [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+  alias nvm='unalias nvm node npm && . "$NVM_DIR"/nvm.sh && nvm'
+  alias node='unalias nvm node npm && . "$NVM_DIR"/nvm.sh && node'
+  alias npm='unalias nvm node npm && . "$NVM_DIR"/nvm.sh && npm'
+fi
